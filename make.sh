@@ -3,8 +3,10 @@
 # Script to track resources used by https://verifier.globalnames.org
 #
 
+# first track this script
+preston track "file://$PWD/$0"
 
-
+# then track the content
 preston track "http://opendata.globalnames.org/dwca/"\
  | grep "hash://sha256"\
  | preston cat\
